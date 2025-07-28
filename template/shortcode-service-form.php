@@ -108,7 +108,7 @@
 <input type="hidden" class="form-control" id="officeID" />
 <input type="hidden" class="form-control" id="authenticationKey" />
 <input type="hidden" class="form-control" id="authenticationToken" /></div>
-<div id="moreInfo">
+<div id="moreInfo" style="display: none;">
 <div class="payment-title">
 <h3>Payment Information</h3>
 </div>
@@ -134,8 +134,8 @@
 <div class="form-group"><label for="usr">Enter Promo Code:</label>
 <input type="text" class="form-control" id="promoCode" style="display: block;padding: 15px; width: 37%; border: 1px solid #a8a8a8; border-radius: 3px; margin-bottom: 20px; margin-top: 5px;" />
 <small>Your promo discount will be applied before you are charged for your first treatment.</small></div>
-<div class="display"><a href="#final_process" type="submit" onclick="scheduleAppointment(this)" class="schedule-service--next run">Schedule Appointment</a></div>
 </div>
+<div class="display"><a href="#final_process" type="submit" onclick="scheduleAppointment(this)" class="schedule-service--next run">Schedule Appointment</a></div>
 <div id="zipcodeAvailable" style="display: none;">
 <h3 style="font-size: 19px;">Thank you for your interest, but we are not currently offering services to this location. <span id="availableCode"></span></h3>
 <p style="font-size: 19px;">To learn how you can join the Marshal Team, please visit our Franchise Opportunities page to <a href="https://mosquito.wordpressthe.com/franchise-opportunities/">learn more.</a></p>
