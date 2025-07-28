@@ -23,6 +23,13 @@ function myRequest() {
   }
 }
 
+window.onload = function(){
+	 var checkBox = document.getElementById("request_information");
+	if (checkBox.checked == false){
+		myRequest();
+	}
+};
+
 function phonenumber(inputtxt)
 {
   var phoneno = /^\d{10}$/;
@@ -268,6 +275,30 @@ function pestSubmition( n ) {
 
 function scheduleAppointment(n) {
 	
+	  var checkBox = document.getElementById("request_information");
+	  if (checkBox.checked == false){
+
+			const divElem = document.querySelector("#moreInfo");
+			const inputElements = divElem.querySelectorAll("input");
+			var er = 0;
+
+			for (var i = 0; i < inputElements.length; i++) {
+				if(inputElements[i].id != 'promoCode') {
+					if ( document.getElementById(inputElements[i].id).value == '' ) {
+						document.getElementById(inputElements[i].id).style.border = "1px solid red";
+						er += 1;
+					} else {
+						document.getElementById(inputElements[i].id).style.border = "1px solid #a8a8a8";
+					}
+				}
+			}
+			if ( er > 0 ) {
+				console.log('required')
+				return;
+			}
+
+	  }
+
 	var ct_none_fname = document.getElementById('firstname');	
 	var ct_none_lname = document.getElementById('lastname');	
 	var streetAddress = document.getElementById('streetAddress');
